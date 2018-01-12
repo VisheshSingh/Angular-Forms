@@ -3,18 +3,23 @@
   <form action="">
     <div>
       <label for="title">Title:</label><br>
-      <input type="text" class="form-control" id="title" required>
+      <input type="text" class="form-control" id="title" required [(ngModel)] = "model.title" name="title">
     </div>
     <div>
       <label for="author">Author:</label><br>
-      <input type="text" class="form-control" id="author" required>
+      <input type="text" class="form-control" id="author" required [(ngModel)] = "model.author" name="author">
     </div>
     <div>
       <label for="url">URL:</label><br>
-      <input type="text" class="form-control" id="url" required>
+      <input type="text" class="form-control" id="url" required [(ngModel)] = "model.url" name="url">
     </div>
     <div>
       <input type="submit" class="btn btn-success" value="Submit">
     </div>
   </form>
+  <br>
+  <div class="output">
+    <h2>Model: </h2>
+     {{ currentBook }}
+  </div>
 </div>
